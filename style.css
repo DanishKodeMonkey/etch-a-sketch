@@ -25,6 +25,7 @@ body{
     height: 800px;
     background-color:lightgrey;
     padding-top:50px;
+
 }
 /* screen containing the gridd */
 .sketch-screen{
@@ -44,5 +45,6 @@ body{
 }
 /* Row styling (evenly distribute rows) */
 .sketch-screen>div>*{
-    flex:1
+    flex:1;
+
 }
