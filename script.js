@@ -1,6 +1,32 @@
 let screen = document.querySelector(".sketch-screen")
+let gridBtn = document.querySelector("#gridBtn")
+let size = 16 // Grid field size, default value 16
 
-function makeGrid(size = 16) {
+//Start out by making a default grid
+makeGrid(size)
+
+//Function for grid size button
+gridBtn.addEventListener("click", () => {
+  const userInput = prompt(
+    "Enter a value for the size of the grid between 3-100"
+  )
+  if (userInput > 100 || userInput < 3) {
+    alert("You have entered an invalid value, try again.")
+    userInput = prompt("Enter a value between 3-100")
+  } else {
+    size = userInput
+    clearGrid()
+    makeGrid(size)
+  }
+})
+
+function clearGrid() {
+  while (screen.firstChild) {
+    screen.removeChild(screen.firstChild)
+  }
+}
+
+function makeGrid(size) {
   for (let i = 0; i < size; i++) {
     let column = document.createElement("div")
     column.classList.add("column")
@@ -23,6 +49,12 @@ function addOnHover() {
   })
 }
 function changeColor(e) {
-  e.target.style.backgroundColor = "black"
+  e.target.style.backgroundColor = randomRgb()
 }
-makeGrid(100)
+
+let randomRgb = () => {
+  let r = Math.floor(Math.random() * 256) //red
+  let g = Math.floor(Math.random() * 256) //green
+  let b = Math.floor(Math.random() * 256) //blue
+  return "rgb(" + r + "," + g + "," + b + ")"
+}
