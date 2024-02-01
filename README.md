@@ -23,8 +23,13 @@ The directions are as follows:
     <li>
     put the square divs into a div container to manage them from as a whole
     </li>
+    <li>
+    use flexbox to make divs form a grid. Make sure NOT to use css grid for this.
     </ul>
 <li>
+<li>Set up a "hover" effect so the grid changes color when the mouse passes over them, leaving a "pixelated" trail through the grind, like a pen would.</li>
+<li>Add a button to the top of the screen that will send a popup for the user, asking for the number of squares per side for the new grid.
+    <ul>
+    <li>once submitted, the existing grid shoudl be removed, and replaced with the new grid, ggenerating in the same total space as before (e.g. 960px wide) so a new sketch pad is formed.</li>
+    <li> Account for the performance impact of the larger grid sizes, by limiting the users input to a maximum of 100.
 </ol>
-
-# WIP not done
