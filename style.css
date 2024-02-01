@@ -50,8 +50,11 @@ background-color: rgb(0, 185, 185);
 padding:15px;
 font-size: 20px;
 }
-.controlPanel>button:active{}
-/* screen containing the gridd */
+.controlPanel>button:active{
+background-color: wheat;
+color: black;
+}
+/* screen containing the grid */
 .sketch-screen{
     display:flex;
     flex-direction:row;
