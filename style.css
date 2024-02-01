@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:darkslategrey;
+    display:flex;
+    flex-direction:column;
+    height: 100vh;
+    width: 100%;
+}
+/* Container for the etch-a-sketch. Mainly for centering the app */
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    margin-top: 16px;
+}
+/* container holding the screen */
+.sketch-container {
+    display:flex;
+    justify-content: center;
+    width: 800px;
+    height: 800px;
+    background-color:lightgrey;
+    padding-top:50px;
+}
+/* screen containing the gridd */
+.sketch-screen{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    width: 600px;
+    height:600px;
+    background-color:aliceblue
+}
+/* Column styling (make vertical flexboxes) */
+.sketch-screen>div{
+    height:auto;
+    flex: 1 0 auto;
+    display:flex;
+    flex-direction: column;
+}
+/* Row styling (evenly distribute rows) */
+.sketch-screen>div>*{
+    flex:1
+}
