@@ -10,7 +10,7 @@ gridBtn.addEventListener("click", () => {
   const userInput = prompt(
     "Enter a value for the size of the grid between 3-100"
   )
-  if (userInput > 100 || userInput < 3) {
+  if (userInput > 100 || userInput < 3 || typeof userInput !== "number") {
     alert("You have entered an invalid value, try again.")
     userInput = prompt("Enter a value between 3-100")
   } else {
